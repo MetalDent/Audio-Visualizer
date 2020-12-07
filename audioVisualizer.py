@@ -40,7 +40,7 @@ class AudioBar:
         pygame.draw.rect(screen, self.color, (self.x, self.y + self.max_height - self.height, self.width, self.height))
 
 def main():
-    filename = "sample/sample2.wav"
+    filename = "sample/sample.wav"
 
     time_series, sample_rate = librosa.load(filename)  # getting audio info
     duration = librosa.core.get_duration(y=time_series, sr=sample_rate)
@@ -82,17 +82,18 @@ def main():
     pygame.mixer.music.load(filename)
     pygame.mixer.music.play(0)
 
-    # run until quit
-    running = True
-    while running:
+    # run until music gets over (wait time 2s)
+    running = 0
+    dur = int(duration*1000) + 2000
+    while running != dur:
         t = pygame.time.get_ticks()
         deltaTime = (t - getTicksLastFrame) / 1000
-        getTicksLastFrame = t
+        running, getTicksLastFrame = t, t
 
         # quit the window?
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
+                running = dur
 
         screen.fill((t%2, t%55, t%55))    # background
 

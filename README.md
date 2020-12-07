@@ -12,3 +12,7 @@
 - Got initial idea from [here](https://www.youtube.com/watch?v=ZRKKTyHaSAU)
 - [This](https://pythonprogramming.net/opengl-rotating-cube-example-pyopengl-tutorial/) was super helpful for pygame tutorials
 - Finally, got the librosa idea from [here](https://medium.com/analytics-vidhya/how-to-create-a-music-visualizer-7fad401f5a69)
+
+**ToDo:**
+- Add virtual environment steps in makefile
+- Import audio file from the player window
