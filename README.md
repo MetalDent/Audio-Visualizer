@@ -4,9 +4,9 @@
 - Pygame
 - OpenGL
 
-**Run:**
+**To build:**
 
-	   python audioVisualizer.py
+	   make
 
 **References:**
 - Got initial idea from [here](https://www.youtube.com/watch?v=ZRKKTyHaSAU)
